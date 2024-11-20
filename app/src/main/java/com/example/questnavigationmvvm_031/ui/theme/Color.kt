@@ -1,4 +1,4 @@
-package com.example.questnavigationmvvm_031.ui.theme.theme
+package com.example.questnavigationmvvm_031.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

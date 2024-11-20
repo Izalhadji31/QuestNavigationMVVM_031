@@ -1,4 +1,4 @@
-package com.example.questnavigationmvvm_031.ui.theme.viewmodel
+package com.example.questnavigationmvvm_031.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import com.example.questnavigationmvvm_031.model.Mahasiswa
@@ -21,8 +21,6 @@ class MahasiswaViewModel : ViewModel() {
             alamat = listData [2],
             email = listData [3],
             noTelpon = listData [4]
-        )
-
-        }
+        ) }
     }
 }

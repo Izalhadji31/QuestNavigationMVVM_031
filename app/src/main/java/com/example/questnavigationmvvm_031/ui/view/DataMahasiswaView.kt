@@ -1,4 +1,4 @@
-package com.example.questnavigationmvvm_031.ui.theme.view
+package com.example.questnavigationmvvm_031.ui.view
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -37,6 +37,21 @@ fun DetailMahasiswaView(
 
 @Composable
 fun DetailMhs(judul: String, Isi: String) {
+    Column (
+        modifier = Modifier.fillMaxWidth().padding(10.dp),
+    ){
+        Row(
+
+        ) {
+            Text(text = judul,
+                modifier = Modifier.weight(0.8f))
+            Text(text = ":",
+                modifier = Modifier.weight(0.2f))
+            Text(text = Isi,
+                modifier = Modifier.weight(2f))
+        }
+
+    }
 
 }
 

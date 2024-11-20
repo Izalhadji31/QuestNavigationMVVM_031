@@ -1,4 +1,4 @@
-package com.example.questnavigationmvvm_031.ui.theme.view
+package com.example.questnavigationmvvm_031.ui.view
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
