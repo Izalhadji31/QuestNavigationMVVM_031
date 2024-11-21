@@ -7,6 +7,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -16,16 +17,18 @@ import com.example.questnavigationmvvm_031.ui.view.DetailMahasiswaView
 import com.example.questnavigationmvvm_031.ui.view.FormMahasiswaView
 import com.example.questnavigationmvvm_031.ui.viewmodel.MahasiswaViewModel
 
+
 enum class Halaman {
     Form,
     Data
 }
+
 @Composable
 fun Navigasi(
     modifier: Modifier = Modifier,
     viewModel: MahasiswaViewModel = viewModel(),
     navHost: NavHostController = rememberNavController()
-) {
+){
     Scaffold { isipadding ->
         val uiState by viewModel.dataModel.collectAsState()
 
@@ -33,7 +36,7 @@ fun Navigasi(
             modifier = Modifier.padding(isipadding),
             navController = navHost,
             startDestination = Halaman.Form.name
-        ) {
+        ){
             composable(route = Halaman.Form.name) {
                 val context = LocalContext.current
                 FormMahasiswaView(
@@ -51,7 +54,8 @@ fun Navigasi(
                     dataMhs = uiState,
                     onBackButton = {
                         navHost.popBackStack()
-                    })
+                    }
+                )
             }
         }
     }
