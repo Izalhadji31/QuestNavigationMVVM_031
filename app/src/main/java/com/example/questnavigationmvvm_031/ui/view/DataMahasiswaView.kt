@@ -15,7 +15,8 @@ import com.example.questnavigationmvvm_031.model.Mahasiswa
 @Composable
 fun DetailMahasiswaView(
     dataMhs: Mahasiswa,
-    modifier: Modifier
+    modifier: Modifier,
+    onBackButton: () -> Boolean
 ){
     val listDataMhs = listOf(
         Pair("Nama", dataMhs.nama),
@@ -54,25 +55,3 @@ fun DetailMhs(judul: String, Isi: String) {
     }
 
 }
-
-@Composable
-fun DetailSurat(
-    judul: String, isinya: String
-){
-    Column (
-        modifier = Modifier.fillMaxWidth().padding(10.dp),
-    ){
-        Row(
-
-        ) {
-            Text(text = judul,
-                modifier = Modifier.weight(0.8f))
-            Text(text = ":",
-                modifier = Modifier.weight(0.2f))
-            Text(text = isinya,
-                modifier = Modifier.weight(2f))
-            }
-
-        }
-
-    }

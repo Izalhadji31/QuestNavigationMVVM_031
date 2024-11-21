@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.questnavigationmvvm_031.ui.theme.QuestNavigationMVVM_031Theme
+import com.example.questnavigationmvvm_031.ui.viewmodel.PengolalaHalaman
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,8 +21,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             QuestNavigationMVVM_031Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    PengolalaHalaman(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
